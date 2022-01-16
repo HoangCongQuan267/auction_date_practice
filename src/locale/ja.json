@@ -1,0 +1,17 @@
+{
+    "daysOfTheWeek": {
+        "sunday": "日",
+        "monday": "月",
+        "tuesday": "火",
+        "wednesday": "水",
+        "thursday": "木",
+        "friday": "金",
+        "saturday": "土"
+    },
+    "labels": {
+        "weekly_calendar": "ウィークリーカレンダー",
+        "auction_date_settings": "オークション日の設定",
+        "submit": "参加する",
+        "day_off": "セール休み"
+    }
+}
