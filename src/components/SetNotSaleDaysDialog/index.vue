@@ -33,7 +33,8 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, Ref } from '@vue/composition-api'
-import CalendarDialog from "../CalendarDialog/index.vue";
+import CalendarDialog from "../CalendarDialog/index.vue"
+
 interface SetUp {
     dialog: Ref<boolean>
     inputValue: Ref<string>
@@ -60,10 +61,13 @@ const SetNotSaleDaysDialog = defineComponent({
             }
         }
         const onSubmit = () => {
+            if (inputValue.value !== '' && noteContent.value !== '') {
+                emit('confirm-set-not-sale-days', [inputValue.value, noteContent.value])
+                inputValue.value = ''
+                noteContent.value = ''
+            }
             dialog.value = false
-            emit('confirm-set-not-sale-days', [inputValue.value, noteContent.value])
-            inputValue.value = ''
-            noteContent.value = ''
+
         }
         const onCancel = () => {
             dialog.value = false
